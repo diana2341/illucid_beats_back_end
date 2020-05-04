@@ -1,2 +1,0 @@
-class SoundVolumesController < ApplicationController
-end

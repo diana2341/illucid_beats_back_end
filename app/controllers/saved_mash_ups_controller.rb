@@ -1,2 +1,0 @@
-class SavedMashUpsController < ApplicationController
-end
