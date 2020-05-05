@@ -10,32 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_04_165029) do
+ActiveRecord::Schema.define(version: 2020_05_05_221204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "saved_mash_ups", force: :cascade do |t|
+  create_table "mixes", force: :cascade do |t|
     t.integer "user_id"
     t.string "mix_name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-# mashup_sounds
-  create_table "sound_volumes", force: :cascade do |t|
-    t.integer "saved_mash_up_id"
-    t.integer "sound_id"
-    # sound not sound_id 
-    t.float "volume"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  
-
-  # don't need it really
-  create_table "sounds", force: :cascade do |t|
-    t.string "mp3"
+    t.float "light_rain_volume"
+    t.float "heavy_rain_volume"
+    t.float "large_fire_volume"
+    t.float "campfire_volume"
+    t.float "forest_volume"
+    t.float "river_volume"
+    t.float "strong_wind_volume"
+    t.float "light_wind_volume"
+    t.float "thunder_volume"
+    t.float "wave_volume"
+    t.float "coffee_shop_volume"
+    t.float "bird_volume"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,24 +41,3 @@ ActiveRecord::Schema.define(version: 2020_05_04_165029) do
   end
 
 end
-
-# user has many mashups 
-# create_table "saved_mashup", force: :cascade do |t|
-#   t.integer "user_id"
-#   t.string "mix_name"
-#   t.integer "bird_volume"
-#   t.integer "thunder_volume"
-#   t.integer "rain_volume"
-#   t.integer "waves_volume"
-#   t.integer "fire_volume"
-#   t.integer "river_volume"
-
-#   # sound not sound_id 
-#   t.datetime "created_at", precision: 6, null: false
-#   t.datetime "updated_at", precision: 6, null: false
-# end
-
-# iterate through through volume sound and set the volume to that. 
-# how do i find the right sound and right volume?
-
-# make function for each volume. it will set the volume and then you function

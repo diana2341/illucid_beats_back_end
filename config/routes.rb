@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   # resources :sound_volumes
   # resources :saved_mash_ups
   # resources :sounds
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users
+      resources :mixes
     end
   end
 end
