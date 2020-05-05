@@ -21,15 +21,19 @@ ActiveRecord::Schema.define(version: 2020_05_04_165029) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
+# mashup_sounds
   create_table "sound_volumes", force: :cascade do |t|
     t.integer "saved_mash_up_id"
     t.integer "sound_id"
+    # sound not sound_id 
     t.float "volume"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  
+
+  # don't need it really
   create_table "sounds", force: :cascade do |t|
     t.string "mp3"
     t.datetime "created_at", precision: 6, null: false
@@ -43,3 +47,24 @@ ActiveRecord::Schema.define(version: 2020_05_04_165029) do
   end
 
 end
+
+# user has many mashups 
+# create_table "saved_mashup", force: :cascade do |t|
+#   t.integer "user_id"
+#   t.string "mix_name"
+#   t.integer "bird_volume"
+#   t.integer "thunder_volume"
+#   t.integer "rain_volume"
+#   t.integer "waves_volume"
+#   t.integer "fire_volume"
+#   t.integer "river_volume"
+
+#   # sound not sound_id 
+#   t.datetime "created_at", precision: 6, null: false
+#   t.datetime "updated_at", precision: 6, null: false
+# end
+
+# iterate through through volume sound and set the volume to that. 
+# how do i find the right sound and right volume?
+
+# make function for each volume. it will set the volume and then you function
