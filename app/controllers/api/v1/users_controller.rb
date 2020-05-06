@@ -11,15 +11,14 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    # find_or_create_by
-    # user = User.find_or_create_by(username: user_params[:username])
-    # render json: user
-    user = User.new(user_params)
-      if user.save
-        render json: user
-      else
-        render error: {error: "Unable to create User."}, status:400
-      end
+    user = User.find_or_create_by(user_params)
+    render json: user
+    # user = User.new(user_params)
+    #   if user.save
+      #   render json: user
+      # else
+      #   render error: {error: "Unable to create User."}, status:400
+      # end
   end
 
   # def update
