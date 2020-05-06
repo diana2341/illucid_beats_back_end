@@ -1,4 +1,4 @@
-class MixesController < ApplicationController
+class Api::V1::MixesController < ApplicationController
 
   def index
     mix = Mix.all
@@ -15,7 +15,7 @@ class MixesController < ApplicationController
     if mix.save
       render json: mix
     else
-      render error: {error: ‘Unable to save Mix.’}, status:400
+      render error: {error: "Unable to save Mix."}, status:400
     end
   end
 
@@ -23,9 +23,9 @@ class MixesController < ApplicationController
     mix = Mix.find(params[:id])
     if mix
       mix.destroy
-      render json: {message: ‘Mix successfully deleted’}, status: 200
+      render json: {message: "Mix successfully deleted"}, status: 200
     else
-      render json: {error: ‘Unable to delete Mix}, status: 400
+      render json: {error: "Unable to delete Mix"}, status: 400
     end
   end
 
