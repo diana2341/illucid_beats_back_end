@@ -18,39 +18,18 @@ ActiveRecord::Schema.define(version: 2020_05_05_221204) do
   create_table "mixes", force: :cascade do |t|
     t.integer "user_id"
     t.string "mix_name"
-    t.float "light_rain_volume"
-    t.float "heavy_rain_volume"
-    t.float "large_fire_volume"
-    t.float "campfire_volume"
-    t.float "forest_volume"
-    t.float "river_volume"
-    t.float "strong_wind_volume"
-    t.float "light_wind_volume"
-    t.float "thunder_volume"
-    t.float "wave_volume"
-    t.float "coffee_shop_volume"
-    t.float "bird_volume"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "saved_mash_ups", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "mix_name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "sound_volumes", force: :cascade do |t|
-    t.integer "saved_mash_up_id"
-    t.integer "sound_id"
-    t.float "volume"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "sounds", force: :cascade do |t|
-    t.string "mp3"
+    t.float "light_rain_volume", default: 0.0
+    t.float "heavy_rain_volume", default: 0.0
+    t.float "large_fire_volume", default: 0.0
+    t.float "campfire_volume", default: 0.0
+    t.float "forest_volume", default: 0.0
+    t.float "river_volume", default: 0.0
+    t.float "strong_wind_volume", default: 0.0
+    t.float "light_wind_volume", default: 0.0
+    t.float "thunder_volume", default: 0.0
+    t.float "wave_volume", default: 0.0
+    t.float "coffee_shop_volume", default: 0.0
+    t.float "bird_volume", default: 0.0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
