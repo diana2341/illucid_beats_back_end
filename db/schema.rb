@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_221204) do
+ActiveRecord::Schema.define(version: 2020_05_08_164655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(version: 2020_05_05_221204) do
     t.float "bird_volume", default: 0.0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "cat_purring_volume", default: 0.0
+    t.float "night_sound_volume", default: 0.0
+    t.float "wind_chime_volume", default: 0.0
   end
 
   create_table "users", force: :cascade do |t|
