@@ -1,4 +1,4 @@
-class Api::V1::MixesController < ApplicationController
+class MixesController < ApplicationController
 
   def index
     mix = Mix.all
