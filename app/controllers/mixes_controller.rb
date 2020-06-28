@@ -36,4 +36,5 @@ class MixesController < ApplicationController
     params.require(:mix).permit(:mix_name, :user_id, :light_rain_volume, :heavy_rain_volume, :large_fire_volume, :campfire_volume, :forest_volume, :river_volume, :strong_wind_volume, :light_wind_volume, :thunder_volume, :wave_volume, :coffee_shop_volume, :bird_volume,:night_sound_volume,:wind_chime_volume,:cat_purring_volume)
   end
 end
+# 
 
