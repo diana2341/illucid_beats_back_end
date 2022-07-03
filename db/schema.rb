@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_08_164655) do
+ActiveRecord::Schema.define(version: 2022_07_03_044659) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "mixes", force: :cascade do |t|
-    t.integer "user_id"
+    t.string "user_id"
     t.string "mix_name"
     t.float "light_rain_volume", default: 0.0
     t.float "heavy_rain_volume", default: 0.0
